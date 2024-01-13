@@ -1,0 +1,28 @@
+/* Smartphone Portrait */
+
+/* Smarphone Landscape */
+@media (min-width: 576px) {
+    body {
+        background-color: blue;
+    }
+}
+/* Tablet Portrait */
+@media (min-width: 768px) {
+    body {
+        background-color: brown;
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 992px) {
+    body {
+        background-color: yellow;
+    }
+}
+
+/* PC */
+@media (min-width: 1200px) {
+    body {
+        background-color: rgb(235, 8, 8);
+    }
+}
