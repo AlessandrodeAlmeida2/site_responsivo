@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
@@ -34,6 +38,17 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.flex5 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flex6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .botao {
@@ -106,12 +121,12 @@ label {
 
 nav ul {
     list-style: none;
-    background-color: #343538;
+    background-color: rgba(52, 53, 56, 0.95);
     height: 100vh;
     position: fixed;
     top: 60px;
-    right: -100%;
-    width: 100%;
+    right: -65%;
+    width: 65%;
     transition: all 0.5s;
 }
 
@@ -122,6 +137,7 @@ nav ul {
 nav ul li {
     padding: 20px;
     border-bottom: 1px solid #a9a9a9;
+    text-align: right;
 }
 
 nav ul li a {
@@ -253,6 +269,46 @@ main h2 {
     font-size: 1.25em;
 }
 
+address {
+    padding: 35px 10px 50px 10px;
+    background: url(img/background2.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+address a {
+    text-decoration: none;
+    color: #fff;
+}
+
+address img {
+    padding-top: 15px;
+}
+
+#iconeLocal {
+    display: none;
+}
+
+#dados {
+    margin: 30px 0px 15px 0px;
+}
+
+#googleMaps {
+    display: none;
+}
+
+footer {
+    padding: 50px;
+    background-color: #343538;
+    color: #fff;
+    text-align: center;
+}
+
+#social {
+    margin-bottom: 25px;
+}
+
 /* Smarphone Landscape */
 @media (min-width: 576px) {
     .container{
@@ -266,6 +322,16 @@ main h2 {
     #video iframe {
         width: 560px;
         height: 315px;
+    }
+
+    .flex5 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #social {
+        margin: 0px;
     }
 }
 
@@ -321,6 +387,7 @@ main h2 {
     
     nav ul {
         position: static;
+        width: 100%;
         height: auto;
         background-color: transparent;
         margin-top: 50px;
@@ -373,5 +440,21 @@ main h2 {
     #qrcode img {
         width: 225px;
         height: 225px;
+    }
+
+    #iconeLocal {
+        display: inline;
+    }
+
+    #iconeMapa {
+        display: none;
+    }
+
+    #googleMaps {
+        display: inline;
+    }
+
+    .flex6 {
+        flex-direction: row-reverse;
     }
 }
