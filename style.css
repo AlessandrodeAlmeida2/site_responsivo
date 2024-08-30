@@ -206,7 +206,21 @@ main h2 {
 }
 
 #video {
-    padding-top: 25px;
+    padding: 25px 20px 50px 20px;
+}
+
+#video ul li {
+    margin: 5px;
+}
+
+#video ul li img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#video ul li img:hover {
+    transform: scale(1.15);
 }
 
 #textoSite {
@@ -305,9 +319,30 @@ footer {
     text-align: center;
 }
 
-#social {
+#social i {
+    color: #fff;
     margin-bottom: 25px;
+    font-size: 2rem;
+    margin: 0.5rem;
+    transition: all 150ms ease-in-out;
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.5));
 }
+
+#social i:hover {
+    transform: scale(1.2);
+    transform: translate(-1px, -1px);
+      animation: glitch 200ms infinite;
+    -webkit-animation: glitch 300ms infinite;
+    color: white;
+  }
+  
+  @keyframes glitch {
+      0% { text-shadow: -3px 2px #E73C7E, -2px -4px #2CABFF, -1px -1px black, 3px 5px rgb(0, 0, 0);}
+      35% { text-shadow: -2px -4px #E73C7E, 2px 1x #2CABFF, -1px -1px black, 3px 5x 5px rgb(0, 0, 0); }
+    40% { text-shadow: 2px -1px #E73C7E, -4px 1px #2CABFF, -1px -1px black, 3px 5px 5px rgb(0, 0, 0);}
+    75% { text-shadow: -3px -1px #E73C7E, -2px -2px #2CABFF, -1px -1px black, 3px 5px 5px rgb(0, 0, 0);}
+      100% { text-shadow: -2px -1px #E73C7E, 2px -1px #2CABFF, -1px -1px black, 3px 5px 5px rgb(0, 0, 0);}
+  }
 
 /* Smarphone Landscape */
 @media (min-width: 576px) {
@@ -420,7 +455,7 @@ footer {
     }
 
     .flex3 {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
     }
 
