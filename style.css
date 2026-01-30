@@ -148,6 +148,7 @@ header {
 
 #logo img {
     height: 60px;
+    margin-top: 15px;
     filter: drop-shadow(0 0 5px var(--primary-neon));
     transition: transform 0.3s;
 }
@@ -209,7 +210,7 @@ nav ul li a:hover {
 
 /* Sections Glassmorphism */
 section {
-    padding: 80px 0;
+    padding: 50px 0;
     position: relative;
     overflow: hidden;
     /* Evitar overflow horizontal */
@@ -338,7 +339,10 @@ main .container {
     box-shadow: 0 0 10px var(--primary-neon);
 }
 
-/* DNA / Video Section */
+#textoWire a {
+    margin-top: 20px;
+}
+
 /* DNA / Video Section */
 #video ul {
     display: flex;
