@@ -481,6 +481,22 @@ footer {
 /* Correção específica para layout quebrado no mobile */
 @media (max-width: 768px) {
 
+    /* Seções com conteúdo devem ocupar 100% da altura em mobile */
+    section:not(:empty) {
+        min-height: 100vh;
+        padding: 80px 0 50px 0; /* Espaço para header fixo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Seções vazias devem ter altura mínima para navegação funcionar */
+    section:empty {
+        min-height: 1px;
+        padding: 0;
+        display: block;
+    }
+
     .flex,
     .flex2,
     .flex4 {
@@ -504,5 +520,16 @@ footer {
     .card {
         width: 100%;
         max-width: 350px;
+    }
+
+    /* Ajuste específico para seção de cards (Trabalho) */
+    section:has(.cards) {
+        min-height: 100vh;
+        align-items: flex-start;
+        padding-top: 100px;
+    }
+
+    section:has(.cards) .container {
+        width: 100%;
     }
 }
